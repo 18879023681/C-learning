@@ -27,5 +27,27 @@ int main()
 
     outfile << data << endl;
 
-return 0;
+
+
+    // 关闭打开的文件
+    outfile.close();
+
+    // 以读模式打开文件
+    ifstream infile;
+    infile.open("Main_file2.txt");
+
+    cout << "读取文件信息：" << endl;
+    infile >> data;
+
+    // 在屏幕上写入数据
+    cout << data << endl;
+
+    // 再次从文件读取数据，并显示它
+    infile >> data;
+    cout << data << endl;
+
+    // 关闭打开的文件
+    infile.close();
+
+    return 0;
 }
